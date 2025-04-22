@@ -1,0 +1,104 @@
+// responsivlik
+$tablet: 768px;
+$desktop: 1024px;
+
+// aralıq
+$spacing-sm: 12px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 40px;
+$spacing-xxl: 64px;
+
+.footer {
+  background-color: #040406; 
+  color: #d1d5db;
+  padding: $spacing-xxl 0;
+
+  &-container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 $spacing-md;
+  }
+
+  &-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-xl;
+
+    @media (min-width: $tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: $desktop) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &-text {
+    margin-top: $spacing-md;
+    font-size: 18px;
+    color: #9ca3af;
+    line-height: 1.6;
+  }
+
+  &-social {
+    margin-top: $spacing-lg;
+    display: flex;
+    gap: $spacing-sm;
+    .social-link {
+      width: 36px;
+      height: 36px;
+      background-color: #191c1e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #f15f2a;
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px #040406, 0 0 0 4px #f15f2a;
+      }
+    }
+  }
+
+  &-title {
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-bottom: $spacing-md;
+    border-bottom: 1px solid #374151;
+    // margin-bottom: $spacing-lg;
+  }
+
+  &-contact-list,
+  &-links,
+  &-hours {
+    margin-top: $spacing-lg;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+
+    .sidebar-links {
+      font-size: 18px;
+      color: #9ca3af;
+      transition: color 0.3s;
+    }
+    .contact-item {
+      font-size: 18px;
+      color: #9ca3af;
+      padding: 5px 0;
+    }
+    .openHoursItem {
+      display: flex;
+      align-items: baseline;
+      font-size: 18px; 
+      color: #9ca3af; 
+    }
+  }
+}

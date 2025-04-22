@@ -2,7 +2,7 @@ import React from 'react'
 
 function Home() {
   return (
-    <div>Home</div>
+    <div style={{padding:"50px 0"}}>Home</div>
   )
 }
 

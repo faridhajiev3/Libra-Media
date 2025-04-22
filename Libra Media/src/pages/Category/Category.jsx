@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function Category() {
-  return (
-    <div>Category</div>
-  )
+  return <div style={{ padding: "50px 0" }}>Category</div>;
 }
 
-export default Category
+export default Category;
