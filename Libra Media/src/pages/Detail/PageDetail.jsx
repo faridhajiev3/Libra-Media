@@ -1,15 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import { CiStar } from "react-icons/ci";
 import { FaStar, FaPencilAlt } from "react-icons/fa";
 import { TbTruckDelivery } from "react-icons/tb";
 import { MdOutlineRecycling } from "react-icons/md";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import "../../scss/detail.scss"
+import "../../scss/detail.scss";
+import { addToBasket } from "../../redux/slice/basketslice";
 
 function PageDetail() {
+  const productData = {
+    productName:
+      "Glowy Super Gel with Advanced Night Ser Kadın Bordo Büzgü Detaylı",
+    reviewCount: 144,
+    rating: 4,
+    questionCount: 285,
+    storeName: "Cavidstore",
+    colors: [
+      { name: "Black", paint: "black" },
+      { name: "Green", paint: "green" },
+      { name: "Red", paint: "red" },
+    ],
+    sizes: ["S", "M", "L", "XL"],
+    price: 9,
+    estimatedDelivery: "20 - 30 January",
+  };
+
+  const [selectedColor, setSelectedColor] = useState(
+    productData.colors[0]?.name || ""
+  );
+  const [selectedSize, setSelectedSize] = useState(productData.sizes[0] || "");
+  // redux
   const { id } = useParams();
   const { selectedDetail } = useSelector((state) => state.detail);
+
+  const dispatch = useDispatch()
+
+  const handleAddToCart=(item)=>{
+    dispatch(addToBasket(item))
+  }
+  console.log(selectedDetail)
   return (
     <div style={{ minHeight: "100vh", backgroundColor: "#fff" }}>
       <div className="product-container">
@@ -27,9 +57,9 @@ function PageDetail() {
               <h1>{selectedDetail.title}</h1>
               <div className="reviews">
                 <div className="stars">
-                <CiStar  className="star empty" />
-                <CiStar  className="star empty" />
-                <CiStar  className="star empty" />
+                  <CiStar className="star empty" />
+                  <CiStar className="star empty" />
+                  <CiStar className="star empty" />
                 </div>
                 <span>144 Reviews</span>
                 <span>285 Q&A</span>
@@ -45,10 +75,10 @@ function PageDetail() {
 
             <div className="color-selection">
               <p>
-                {/* Select Color: <span>{selectedColor}</span> */}
+                Select Color: <span>{selectedColor}</span>
               </p>
-              {/* <div className="colors">
-                {colors.map((color) => (
+              <div className="colors">
+                {productData.colors.map((color) => (
                   <div
                     key={color.name}
                     onClick={() => setSelectedColor(color.name)}
@@ -62,30 +92,15 @@ function PageDetail() {
                     ></div>
                   </div>
                 ))}
-              </div> */}
+              </div>
             </div>
 
-            {/* <div className="changeImg">
-              <p>Images</p>
-              <div className="different-form">
-                {picture.map((pic) => (
-                  <div className="different-img">
-                    <img
-                      onClick={() => setSelectedImage(pic.scene)}
-                      src={pic.scene}
-                      // alt={`Scene ${index}`}
-                    />
-                  </div>
-                ))}
-              </div>
-            </div> */}
-
-            {/* <div className="size-selection">
+            <div className="size-selection">
               <p>
                 Select Size: <span>{selectedSize}</span>
               </p>
               <div className="sizes">
-                {sizes.map((size) => (
+                {productData.sizes.map((size) => (
                   <div
                     key={size}
                     onClick={() => setSelectedSize(size)}
@@ -97,7 +112,7 @@ function PageDetail() {
                   </div>
                 ))}
               </div>
-            </div> */}
+            </div>
 
             <div className="shipping-info">
               <div>
@@ -120,7 +135,7 @@ function PageDetail() {
 
             <div className="price-cart">
               <h2>${selectedDetail.price}</h2>
-              <button>Add To Cart</button>
+              <button onClick={()=>handleAddToCart(selectedDetail)}>Add To Cart</button>
             </div>
           </div>
         </div>

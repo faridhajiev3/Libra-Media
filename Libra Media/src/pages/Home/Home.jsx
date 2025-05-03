@@ -9,6 +9,11 @@ function Home() {
   const dispatch = useDispatch();
 
   const { items } = useSelector((state) => state.products);
+  const { empty } = useSelector((state) => state.search);
+
+  const filteredItems = items.filter((item) => 
+    item.title.toLowerCase().includes(empty.toLowerCase())
+  );
 
   useEffect(() => {
     dispatch(getProducts());
@@ -19,7 +24,7 @@ function Home() {
     <div className="container-slider">
       <NewCollection />
       <div className="cards">
-        {items.map((item) => (
+        {filteredItems.map((item) => (
           <Products key={item.id} item={item} />
         ))}
       </div>

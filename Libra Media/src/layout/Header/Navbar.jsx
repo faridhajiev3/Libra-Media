@@ -1,20 +1,24 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { TiShoppingCart } from "react-icons/ti";
 import { IoMdClose } from "react-icons/io";
 import { CiSearch } from "react-icons/ci";
 import "../../scss/navbar.scss";
 import { SidebarData } from "./SidebarData";
+import { useDispatch } from "react-redux";
+import { setSearch } from "../../redux/slice/searchSlice";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const dispatch = useDispatch();
   return (
     <nav className="navbar">
       <div className="container">
         <div className="nav-content">
           <div className="logo">
             <NavLink to="/" className="logo-text">
-              Libra Media
+              Vendo App
             </NavLink>
           </div>
 
@@ -31,8 +35,12 @@ function Navbar() {
               type="text"
               placeholder="Search..."
               className="search-input"
+              onChange={(e) => dispatch(setSearch(e.target.value))}
             />
             <CiSearch className="search-icon" />
+            <NavLink to="/cart">
+              <TiShoppingCart className="basket-cart" />
+            </NavLink>
           </div>
 
           <div className="mobile-menu-button">

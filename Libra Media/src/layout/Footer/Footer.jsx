@@ -49,7 +49,7 @@ function Footer() {
         <div className="footer-grid">
           {/* Loqo */}
           <div className="footer-brand">
-            <h1>Libra Media</h1>
+            <h1>Vendo App</h1>
             <p className="footer-text">
               Eiusmod consectetur adipisicing elit, sed do eiusmod tempor
               incididunt ut
