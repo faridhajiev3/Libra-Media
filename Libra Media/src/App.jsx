@@ -8,15 +8,17 @@ import PageContainer from "./container/PageContainer";
 import PageDetail from "./pages/Detail/PageDetail";
 import Cart from "./pages/Cart/Cart";
 import Maps from "./components/Maps";
+import Wishllst from "./pages/Wishlist/Wishllst";
 
 function App() {
   return (
-    <PageContainer>
+    <PageContainer> 
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/detail/:id" element={<PageDetail />} />
         <Route path="/category" element={<Category />} />
+        <Route path="/like" element={<Wishllst />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/map" element={<Maps />} />
       </Routes>

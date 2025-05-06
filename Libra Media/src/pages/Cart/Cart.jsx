@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteBasket } from "../../redux/slice/basketslice";
+import { decrementQuantity, deleteBasket, incrementQuantity } from "../../redux/slice/basketslice";
 import "../../scss/cart.scss";
 import CartSummary from "./CartSummary";
 import { useNavigate } from "react-router-dom";
@@ -14,6 +14,8 @@ function Cart() {
     console.log("Silinir:", id); 
     dispatch(deleteBasket(id));
   };
+
+  const total = cartItems.reduce((arr,sub)=> arr + sub.price * sub.quantity,0)
 
   return (
     <div className="cart-container">
@@ -32,12 +34,12 @@ function Cart() {
                 red/<span>M</span>
               </p>
               <div className="cart-item-price">
-                <h3>$10.00</h3>
+                <h3>${(item.price * item.quantity).toFixed(2)}</h3>
               </div>
               <div className="cart-item-quantity">
-                <button className="quantity-btn">-</button>
-                <p className="quantity-value">0</p>
-                <button className="quantity-btn">+</button>
+                <button className="quantity-btn" onClick={() => dispatch(decrementQuantity(item.id))}>-</button>
+                <p className="quantity-value">{item.quantity}</p>
+                <button className="quantity-btn" onClick={() => dispatch(incrementQuantity(item.id))}>+</button>
               </div>
               <button
                 className="remove-btn"
@@ -78,16 +80,16 @@ function Cart() {
                   </div>
                 </div>
               </td>
-              <td className="price-cell">$5.00</td>
+              <td className="price-cell">${item.price}</td>
               <td className="quantity-cell">
                 <div className="quantity-controls">
-                  <button className="quantity-btn">-</button>
-                  <p className="quantity-value">1</p>
-                  <button className="quantity-btn">+</button>
+                  <button className="quantity-btn" onClick={() => dispatch(decrementQuantity(item.id))}>-</button>
+                  <p className="quantity-value">{item.quantity}</p>
+                  <button className="quantity-btn" onClick={() => dispatch(incrementQuantity(item.id))}>+</button>
                 </div>
               </td>
               <td className="total-cell">
-                $10.00
+                ${(item.price * item.quantity).toFixed(2)}
               </td>
               <td className="action-cell">
                 <button
