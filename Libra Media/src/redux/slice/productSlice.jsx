@@ -3,6 +3,7 @@ import { fetchProducts } from "../../api/api";
 
 const initialState = {
   items: [],
+  status: "idle",
 };
 
 export const getProducts = createAsyncThunk(
@@ -18,9 +19,17 @@ const productsSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(getProducts.fulfilled, (state, action) => {
-      state.items = action.payload;
-    });
+    builder
+      .addCase(getProducts.pending, (state) => {
+        state.status = "loading";
+      })
+      .addCase(getProducts.fulfilled, (state, action) => {
+        state.items = action.payload;
+        state.status = "succeeded";
+      })
+      .addCase(getProducts.rejected, (state) => {
+        state.status = "failed";
+      });
   },
 });
 

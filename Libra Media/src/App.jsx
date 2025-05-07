@@ -9,6 +9,7 @@ import PageDetail from "./pages/Detail/PageDetail";
 import Cart from "./pages/Cart/Cart";
 import Maps from "./components/Maps";
 import Wishllst from "./pages/Wishlist/Wishllst";
+import CreditCard from "./components/CreditCard";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/like" element={<Wishllst />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/map" element={<Maps />} />
+          <Route path="/credit" element={<CreditCard />} />
         </Routes>
       </PageContainer>
       <Footer />

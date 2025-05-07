@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import "../scss/maps.scss"
+import { useNavigate } from "react-router-dom";
 
 function Maps() {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate()
 
   const handleChange = () => {
     setOpen(!open);
@@ -22,7 +24,7 @@ function Maps() {
       </div>
 
       <div className="map-actions">
-        <button className="btn btn-primary">Confirm location</button>
+        <button className="btn btn-primary" onClick={()=>navigate("/credit")}>Confirm location</button>
         <button className="btn btn-secondary" onClick={handleChange}>
           {open ? "Hide manual entry" : "Enter address manually"}
         </button>
@@ -57,7 +59,7 @@ function Maps() {
           <label htmlFor="address">Address Details</label>
           <textarea
             id="address"
-            placeholder="Enter your complete address"
+            placeholder="Enter your complete address" 
           ></textarea>
         </div>
 

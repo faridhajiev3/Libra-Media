@@ -1,6 +1,7 @@
 // NewCollection
 
-.container-slider, .container-likes {
+.container-slider,
+.container-likes {
   // max-width: 1400px;
   // margin: 0 auto;
   // padding: 20px;
@@ -74,6 +75,25 @@
   margin: 60px 0 20px 0;
   gap: 30px;
 
+  .loading-text {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #704f38;
+    padding: 40px;
+    animation: blink 1.5s infinite;
+  }
+
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.3;
+    }
+  }
+
   .card {
     background: #fff;
     border-radius: 12px;
@@ -109,7 +129,8 @@
         font-size: 18px;
       }
 
-      .heart-full,.heart-empty{
+      .heart-full,
+      .heart-empty {
         font-size: 25px;
         color: red;
         position: absolute;
@@ -137,7 +158,7 @@
 @media (max-width: 867px) {
   .eng {
     padding: 30px 20px;
-    
+
     .mostly {
       flex-direction: column;
       text-align: center;

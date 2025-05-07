@@ -8,10 +8,10 @@ import Products from "../../components/Products";
 function Home() {
   const dispatch = useDispatch();
 
-  const { items } = useSelector((state) => state.products);
+  const { items, status } = useSelector((state) => state.products);
   const { empty } = useSelector((state) => state.search);
 
-  const filteredItems = items.filter((item) => 
+  const filteredItems = items.filter((item) =>
     item.title.toLowerCase().includes(empty.toLowerCase())
   );
 
@@ -24,9 +24,11 @@ function Home() {
     <div className="container-slider">
       <NewCollection />
       <div className="cards">
-        {filteredItems.map((item) => (
-          <Products key={item.id} item={item} />
-        ))}
+        {status === "loading" ? (
+          <p className="loading-text">Loading...</p>
+        ) : (
+          filteredItems.map((item) => <Products key={item.id} item={item} />)
+        )}
       </div>
     </div>
   );

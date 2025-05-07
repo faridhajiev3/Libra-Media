@@ -1,0 +1,77 @@
+.card-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+
+  .card-preview {
+    background: #2c2c2c;
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    position: relative;
+    margin-bottom: 30px;
+
+    .chip {
+      width: 50px;
+      height: 35px;
+      background-color: gold;
+      border-radius: 6px;
+      margin-bottom: 20px;
+    }
+
+    .settings-icon {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 22px;
+    }
+
+    .card-number {
+      font-size: 20px;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+    }
+
+    .card-details {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      opacity: 0.9;
+    }
+  }
+
+  .card-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    .form-group {
+      input {
+        width: 100%;
+        padding: 12px 14px;
+        font-size: 16px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        transition: border-color 0.2s;
+
+        &:focus {
+          outline: none;
+          border-color: #704f38;
+          box-shadow: 0 0 0 2px rgba(112, 79, 56, 0.15);
+        }
+      }
+    }
+
+    .form-row {
+      display: flex;
+      gap: 15px;
+
+      .form-group {
+        flex: 1;
+      }
+    }
+  }
+}
