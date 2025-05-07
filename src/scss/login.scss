@@ -1,0 +1,116 @@
+.login-container {
+    width: 300px;
+    margin: 50px auto;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  
+  .show-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: gray;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+
+ 
+  
+  .logo {
+    font-size: 32px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    .logo-text {
+      font-weight: bold;
+    }
+  
+    .logo-icon {
+      font-size: 32px;
+      margin: 0 5px;
+    }
+  }
+  
+  .login-input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  .password-wrapper {
+    position: relative;
+    width: 100%;
+  
+
+  
+    .show-button {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: #007BFF;
+      cursor: pointer;
+    }
+}
+  
+  
+  .forgot-password {
+    display: block;
+    text-align: left;
+    font-size: 12px;
+    margin: 5px 0;
+    color: #007BFF;
+  }
+  
+  .login-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .other-choice {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .oauth-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  
+    &.apple {
+      font-weight: bold;
+    }
+  
+    &.google {
+      font-weight: bold;
+    }
+  }
+  
+  .signup {
+    margin-top: 20px;
+    font-size: 14px;
+  
+    a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+  } }
