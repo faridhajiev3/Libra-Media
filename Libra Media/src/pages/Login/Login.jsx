@@ -4,7 +4,7 @@ import "../../scss/login.scss";
 function Login() {
   return (
     <>
-      <div className="login-container">
+      <div className="login-container"> 
       <div className="logo">
         <span className="logo-text">VEN</span>
         <span className="logo-icon">🏙</span>
