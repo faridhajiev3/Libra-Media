@@ -12,19 +12,22 @@ import Wishllst from "./pages/Wishlist/Wishllst";
 
 function App() {
   return (
-    <PageContainer> 
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/detail/:id" element={<PageDetail />} />
-        <Route path="/category" element={<Category />} />
-        <Route path="/like" element={<Wishllst />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/map" element={<Maps />} />
-      </Routes>
+    <>
+      <PageContainer>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/detail/:id" element={<PageDetail />} />
+          <Route path="/category" element={<Category />} />
+          <Route path="/like" element={<Wishllst />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/map" element={<Maps />} />
+        </Routes>
+      </PageContainer>
       <Footer />
-    </PageContainer>
+    </>
   );
 }
 
 export default App;
+

@@ -1,9 +1,9 @@
 // NewCollection
 
 .container-slider, .container-likes {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 20px;
+  // max-width: 1400px;
+  // margin: 0 auto;
+  // padding: 20px;
 
   .row {
     .eng {
@@ -80,6 +80,7 @@
     text-align: center;
     overflow: hidden;
     transition: 0.3s;
+    position: relative;
     cursor: pointer;
 
     &:hover {
@@ -111,6 +112,9 @@
       .heart-full,.heart-empty{
         font-size: 25px;
         color: red;
+        position: absolute;
+        top: 18px;
+        right: 60px;
       }
 
       .btn {

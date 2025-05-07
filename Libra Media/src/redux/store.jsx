@@ -4,6 +4,7 @@ import detailReducer from "../redux/slice/detailSlice"
 import basketReducer from "../redux/slice/basketslice"
 import searchReducer from "../redux/slice/searchSlice"
 import wishlistReducer from "../redux/slice/wishlistSlice"
+import commentsReducer from "../redux/slice/commentsSlice"
 
 
 export const store = configureStore({
@@ -13,5 +14,6 @@ export const store = configureStore({
     basket: basketReducer,
     search: searchReducer,
     wishlist: wishlistReducer,
+    comments: commentsReducer
   },
 });

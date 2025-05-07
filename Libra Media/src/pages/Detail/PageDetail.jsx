@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import "../../scss/detail.scss";
 import { addToBasket } from "../../redux/slice/basketslice";
+import Comments from "../../components/comments";
 
 function PageDetail() {
   const productData = {
@@ -138,6 +139,9 @@ function PageDetail() {
               <button onClick={()=>handleAddToCart(selectedDetail)}>Add To Cart</button>
             </div>
           </div>
+        </div>
+        <div>
+          <Comments/>
         </div>
       </div>
     </div>
