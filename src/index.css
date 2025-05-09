@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: "Onest", sans-serif;
+}
+
+:root {
+    --text-color: #2C2C2C;
+    --grey-color: #AEAEB2;
+    --bg-color: #FFFFFF;
+    --border-side: #E8E8E8;
+    --success-color: #48B478;
+    --error-color: #ED4611;
+  }

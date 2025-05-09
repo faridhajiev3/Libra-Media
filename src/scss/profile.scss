@@ -1,0 +1,73 @@
+.header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 16px;
+  height: 70px;
+  position: relative;
+
+  .back-icon {
+    font-size: 22px;
+    cursor: pointer;
+    color: var(--text-color);
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 70%;
+  height: 100vh;
+  background: var(--bg-color);
+  z-index: 200;
+  transition: left 0.3s ease-in-out;
+  padding-top: 70px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 4px 0 16px rgba(0, 0, 0, 0.07);
+
+  &.open {
+    left: 0;
+  }
+}
+
+.mobile-blur-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+}
+
+.mobile-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-side);
+  padding: 18px 24px;
+  text-decoration: none;
+  font-size: 16px;
+  color: var(--text-color);
+  background: none;
+  cursor: pointer;
+}
+
+.mobile-logout-btn {
+  background: none;
+  border: none;
+  color: var(--grey-color);
+  font-size: 16px;
+  padding: 18px 24px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.arrow {
+  color: var(--grey-color);
+  width: 24px;
+  height: 24px;
+}
