@@ -2,6 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 const initialState = {
   cart: [],
+  count: null
 };
 
 const basketSlice = createSlice({
@@ -16,6 +17,7 @@ const basketSlice = createSlice({
           quantity: 1,
           price: action.payload.price || 10,
         });
+        state.count++
       } else {
         existing.quantity += 1;
       }

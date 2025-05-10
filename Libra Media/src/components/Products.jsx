@@ -18,18 +18,27 @@ function Products({ item }) {
 
   const isLiked = likes.some((like) => like.id === item.id);
   return (
-    <div className="card" key={item.id}>
-      <img src={item.image} alt="" onClick={() => handleClick(item)} />
-      <div className="card-content">
-        <h2 className="title">{item.title}</h2>
-        <p>{item.price}</p>
-        <div>
-          {isLiked ? (
-            <IoMdHeart className="heart-full" onClick={() => dispatch(setWishList(item))} />
-          ) : (
-            <IoMdHeartEmpty className="heart-empty" onClick={() => dispatch(setWishList(item))} />
-          )}
-        </div>
+
+    <div className="cart-item">
+      <div className="image-container" onClick={() => handleClick(item)}>
+        <img src={item.image} alt="Pizza" />
+      </div>
+      <div className="heart-icon">
+        {isLiked ? (
+          <IoMdHeart
+            className="heart-full"
+            onClick={() => dispatch(setWishList(item))}
+          />
+        ) : (
+          <IoMdHeartEmpty
+            className="heart-empty"
+            onClick={() => dispatch(setWishList(item))}
+          />
+        )}
+      </div>
+      <div className="item-details">
+        <h3>{item.title}</h3>
+        <p className="price">${item.price}</p>
       </div>
     </div>
   );

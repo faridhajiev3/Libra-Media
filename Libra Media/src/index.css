@@ -1,8 +1,17 @@
-*{
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
-    font-family: "Onest", sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "Onest", sans-serif;
+}
+
+:root {
+  --text-color: #2c2c2c;
+  --grey-color: #aeaeb2;
+  --bg-color: #ffffff;
+  --border-side: #e8e8e8;
+  --success-color: #48b478;
+  --error-color: #ed4611;
 }

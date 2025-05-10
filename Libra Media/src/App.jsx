@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import "./App.scss";
 import Navbar from "./layout/Header/Navbar";
 import Category from "./pages/Category/Category";
@@ -12,8 +12,29 @@ import Wishllst from "./pages/Wishlist/Wishllst";
 import CreditCard from "./components/CreditCard";
 import Login from "./pages/Login/login";
 import SignUp from "./pages/SignUp/SignUp";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { checkAuthState } from "./redux/slice/authSlice";
+import Profile from "./Profile/Profile";
+import MyOrders from "./Profile/MyOrders";
+import MyReturns from "./Profile/MyReturns";
+
+const ProtectedRoute = ({ children }) => {
+  const { isAuthenticated } = useSelector((state) => state.auth);
+  if (!isAuthenticated) {
+    return <Navigate to="/login" />;
+  }
+
+  return children;
+};
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(checkAuthState());
+  }, [dispatch]);
+
   return (
     <>
       <PageContainer>
@@ -26,6 +47,11 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/map" element={<Maps />} />
           <Route path="/credit" element={<CreditCard />} />
+          <Route path="/profil" element={<Profile />}>
+            <Route index element={<MyOrders />} />
+            <Route path="myorder" element={<MyOrders />} />
+            <Route path="myreturn" element={<MyReturns />} />
+          </Route>
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
         </Routes>

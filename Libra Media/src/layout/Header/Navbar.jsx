@@ -6,15 +6,16 @@ import { IoMdClose } from "react-icons/io";
 import { CiSearch } from "react-icons/ci";
 import "../../scss/navbar.scss";
 import { SidebarData } from "./SidebarData";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setSearch } from "../../redux/slice/searchSlice";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const dispatch = useDispatch();
+  const {count} = useSelector((state)=> state.basket)
   return (
     <nav className="navbar">
-      <div className="container">
+      <div className="navbar-container">
         <div className="nav-content">
           <div className="logo">
             <NavLink to="/" className="logo-text">
@@ -38,9 +39,6 @@ function Navbar() {
               onChange={(e) => dispatch(setSearch(e.target.value))}
             />
             <CiSearch className="search-icon" />
-            <NavLink to="/cart">
-              <TiShoppingCart className="basket-cart" />
-            </NavLink>
           </div>
 
           <div className="mobile-menu-button">

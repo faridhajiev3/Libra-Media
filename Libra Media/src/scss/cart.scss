@@ -1,33 +1,6 @@
-
 // Breakpoints
 $tablet: 768px;
 
-// Mixins
-@mixin flex($dir: row, $justify: flex-start, $align: center, $gap: 0) {
-  display: flex;
-  flex-direction: $dir;
-  justify-content: $justify;
-  align-items: $align;
-  gap: $gap;
-}
-
-@mixin button($bg, $color: white) {
-  background: #f9f9f9;
-  color: $color;
-  border: none;
-  border-radius: 4px;
-  padding: 8px 16px;
-  font: 500 14px sans-serif;
-  background-color: #f44336;
-  cursor: pointer;
-  transition: 0.2s;
-
-  &:active {
-    transform: translateY(1px);
-  }
-}
-
-// Cart Container
 .cart-container {
   max-width: 1200px;
   background: white;
@@ -39,7 +12,6 @@ $tablet: 768px;
   }
 }
 
-// Cart Title
 .cart-title {
   font-size: 24px;
   margin-bottom: 20px;
@@ -52,7 +24,6 @@ $tablet: 768px;
   }
 }
 
-// Cart Items (Mobile)
 .cart-items-mobile {
   display: block;
 
@@ -62,7 +33,11 @@ $tablet: 768px;
 }
 
 .cart-item-card {
-  @include flex(row, flex-start, flex-start, 15px);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 15px;
   padding: 15px;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
@@ -81,18 +56,23 @@ $tablet: 768px;
       color: #333;
       margin-bottom: 5px;
     }
+
     .cart-item-variant {
       font-size: 14px;
       color: #757575;
       margin-bottom: 10px;
     }
+
     .cart-item-price h3 {
       font-size: 18px;
       color: #704f38;
       margin: 0;
     }
+
     .cart-item-quantity {
-      @include flex();
+      display: flex;
+      align-items: center;
+      gap: 0;
       margin-bottom: 10px;
 
       .quantity-btn,
@@ -111,18 +91,26 @@ $tablet: 768px;
         font-weight: bold;
         border-radius: 4px;
         cursor: pointer;
-
       }
     }
+
     .remove-btn {
-      @include button(#f44336);
-      font-size: 12px;
+      background: #f44336;
+      color: white;
+      border: none;
+      border-radius: 4px;
       padding: 6px 12px;
+      font: 500 12px sans-serif;
+      cursor: pointer;
+      transition: 0.2s;
+
+      &:active {
+        transform: translateY(1px);
+      }
     }
   }
 }
 
-// Cart Items (Desktop)
 .cart-table {
   width: 100%;
   border-collapse: collapse;
@@ -145,7 +133,9 @@ $tablet: 768px;
   }
 
   .product-info {
-    @include flex(row, flex-start, center, 15px);
+    display: flex;
+    align-items: center;
+    gap: 15px;
 
     img {
       width: 80px;
@@ -156,7 +146,9 @@ $tablet: 768px;
   }
 
   .quantity-controls {
-    @include flex();
+    display: flex;
+    align-items: center;
+    gap: 0;
 
     .quantity-btn,
     .quantity-value {
@@ -170,18 +162,26 @@ $tablet: 768px;
     .quantity-btn {
       background: #eee5db;
       color: #333;
-      font-weight: bold;
       border-radius: 4px;
       cursor: pointer;
     }
   }
 
   .remove-btn {
-    @include button(#f44336);
+    background: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:active {
+      transform: translateY(1px);
+    }
   }
 }
 
-// Cart Summary
 .cart-summary {
   margin-top: 30px;
   padding: 20px;
@@ -200,8 +200,10 @@ $tablet: 768px;
     color: #704f38;
     font-weight: 600;
   }
+
   .summary-row {
-    @include flex(row, space-between);
+    display: flex;
+    justify-content: space-between;
     padding: 10px 0;
     border-bottom: 1px solid #e0e0e0;
     font-size: 16px;
@@ -214,12 +216,22 @@ $tablet: 768px;
       padding-top: 15px;
     }
   }
+
   .checkout-btn {
-    @include button(#704f38);
-    width: 100%;
-    margin-top: 20px;
+    background: #704f38;
+    color: white;
+    border: none;
+    border-radius: 4px;
     padding: 12px;
     font-size: 16px;
     font-weight: 600;
+    width: 100%;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:active {
+      transform: translateY(1px);
+    }
   }
 }

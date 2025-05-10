@@ -2,7 +2,6 @@
 
 .container-slider,
 .container-likes {
-  
   .row {
     .eng {
       border-radius: 32px;
@@ -67,7 +66,7 @@
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   padding: 0 20px;
   margin: 60px 0 20px 0;
   gap: 30px;
@@ -91,62 +90,54 @@
     }
   }
 
-  .card {
+  .cart-item {
     background: #fff;
     border-radius: 12px;
-    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    transition: 0.3s;
-    position: relative;
-    cursor: pointer;
+    transition: transform 0.3s ease;
 
     &:hover {
-      transform: translateY(-8px);
-      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+      transform: translateY(-5px);
     }
 
-    img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-
-    .card-content {
+    .image-container {
+      position: relative;
+      background-color: #f8f7f0;
       padding: 20px;
 
-      h2 {
-        margin: 10px 0;
-        font-size: 22px;
-        color: #222;
+      img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-bottom: 1px solid #eee;
       }
+    }
 
-      p {
-        color: #555;
-        margin-bottom: 20px;
+    .heart-icon {
+      font-size: 24px;
+      color: red;
+      cursor: pointer;
+      text-align: end;
+      padding: 20px 20px 0 0;
+    }
+
+    .item-details {
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      h3 {
+        margin: 0;
         font-size: 18px;
+        color: #333;
       }
 
-      .heart-full,
-      .heart-empty {
-        font-size: 25px;
-        color: red;
-        position: absolute;
-        top: 18px;
-        right: 60px;
-      }
-
-      .btn {
-        font-size: 16px;
-        background-color: #4ca0af;
-        color: #fff;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 8px;
-        transition: 0.3s;
-
-        &:hover {
-          background-color: #3b7a8a;
-        }
+      .price {
+        margin-top: 8px;
+        font-weight: bold;
+        color: #27ae60;
       }
     }
   }

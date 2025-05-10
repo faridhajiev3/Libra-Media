@@ -11,7 +11,7 @@ function Cart() {
   const cartItems = useSelector((state) => state.basket.cart);
 
   const handleDelete = (id) => {
-    console.log("Silinir:", id); 
+    console.log(id); 
     dispatch(deleteBasket(id));
   };
 

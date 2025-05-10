@@ -5,120 +5,113 @@ $mobile-large: 500px;
 .navbar {
   background-color: #fff;
 
-  .container {
+  .nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
 
-    .nav-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 0;
-
-      .logo {
-        .logo-text {
-          font-size: 20px;
-          font-weight: bold;
-          color: #111111;
-          text-transform: uppercase;
-          display: none;
-
-          @media (min-width: $mobile-large) {
-            display: block;
-          }
-        }
-      }
-
-      .nav-links.desktop {
+    .logo {
+      .logo-text {
+        font-size: 20px;
+        font-weight: bold;
+        color: #111111;
+        text-transform: uppercase;
         display: none;
 
-        .nav-link {
-          margin: 0 12px;
-          padding: 6px 12px;
-          color: #111111;
-          transition: color 0.3s;
-
-          &:hover {
-            color: #d1d5db;
-          }
-        }
-
-        .active {
-          border-bottom: solid 3px #f15f2a;
-        }
-
-        @media (min-width: $tablet) {
-          display: flex;
-          align-items: center;
-        }
-      }
-
-      .search-box {
-        position: relative;
-
-        .search-input {
-          background-color: #fff;
-          color: #757575;
-          padding: 10px 16px 10px 38px;
-          border: #c9cacd solid 2px;
-          border-radius: 2px;
-          // border: none;
-          width: 200px;
-          outline: none;
-        }
-
-        .search-icon {
-          position: absolute;
-          left: 12px;
-          top: 50%;
-          transform: translateY(-50%);
-          color: #c9cacd;
-          font-size: 20px;
-          // height: 16px;
-          // width: 16px;
-        }
-        .basket-cart{
-          font-size: 24px;
-          margin: 0 0 0 30px;
-        }
-      }
-
-      .mobile-menu-button {
-        display: block;
-
-        @media (min-width: $tablet) {
-          display: none;
-        }
-
-        .menu-btn {
-          background: none;
-          border: none;
-          color: #111111;
-          cursor: pointer;
-
-          .icon {
-            height: 24px;
-            width: 24px;
-          }
+        @media (min-width: $mobile-large) {
+          display: block;
         }
       }
     }
 
-    .nav-links.mobile {
+    .nav-links.desktop {
+      display: none;
+
+      .nav-link {
+        margin: 0 12px;
+        padding: 6px 12px;
+        color: #111111;
+        transition: color 0.3s;
+
+        &:hover {
+          color: #d1d5db;
+        }
+      }
+
+      .active {
+        border-bottom: solid 3px #f15f2a;
+      }
+
+      @media (min-width: $tablet) {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .search-box {
+      position: relative;
+
+      .search-input {
+        background-color: #fff;
+        color: #757575;
+        padding: 10px 16px 10px 38px;
+        border: #c9cacd solid 2px;
+        border-radius: 2px;
+        // border: none;
+        width: 200px;
+        outline: none;
+      }
+
+      .search-icon {
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #c9cacd;
+        font-size: 20px;
+        // height: 16px;
+        // width: 16px;
+      }
+    }
+
+    .mobile-menu-button {
       display: block;
-      padding: 4px 0;
 
       @media (min-width: $tablet) {
         display: none;
       }
 
-      .nav-link {
-        display: block;
-        padding: 8px 12px;
-        border-radius: 6px;
+      .menu-btn {
+        background: none;
+        border: none;
         color: #111111;
+        cursor: pointer;
 
-        &:hover {
-          background-color: #eee5db;
+        .icon {
+          height: 24px;
+          width: 24px;
         }
+      }
+    }
+  }
+
+  .nav-links.mobile {
+    display: block;
+    padding: 4px 0;
+
+    @media (min-width: $tablet) {
+      display: none;
+    }
+
+    .nav-link {
+      display: block;
+      padding: 8px 12px;
+      border-radius: 6px;
+      color: #111111;
+
+      &:hover {
+        background-color: #eee5db;
       }
     }
   }
