@@ -18,7 +18,7 @@ function Wishllst() {
     navigate(`/detail/${item.id}`);
   };
 
-  const isLiked = likes.some((like) => like.id === item.id);
+  // const isLiked = likes.some((like) => like.id === item.id);
   return (
     <div className="container-likes">
       <div className="cards">
@@ -27,7 +27,7 @@ function Wishllst() {
             <div className="image-container" onClick={() => handleClick(item)}>
               <img src={item.image} />
             </div>
-            <div className="heart-icon">
+            {/* <div className="heart-icon">
               {isLiked ? (
                 <IoMdHeart
                   className="heart-full"
@@ -39,7 +39,7 @@ function Wishllst() {
                   onClick={() => dispatch(setWishList(item))}
                 />
               )}
-            </div>
+            </div> */}
             <div className="item-details">
               <h3>{item.title}</h3>
               <p className="price">${item.price}</p>
