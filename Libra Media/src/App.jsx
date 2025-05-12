@@ -8,6 +8,8 @@ import PageContainer from "./container/PageContainer";
 import PageDetail from "./pages/Detail/PageDetail";
 import Cart from "./pages/Cart/Cart";
 import Maps from "./components/Maps";
+import FilterSideBar from "./pages/FilterSiteBar/FilterSideBar";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
@@ -19,6 +21,7 @@ function App() {
         <Route path="/category" element={<Category />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/map" element={<Maps />} />
+        <Route path="/filter" element={<FilterSideBar />} />
       </Routes>
       <Footer />
     </PageContainer>
