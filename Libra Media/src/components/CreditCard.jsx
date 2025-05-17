@@ -3,9 +3,9 @@ import { CiSettings } from "react-icons/ci";
 import "../scss/creditcard.scss"
 
 function CreditCard() {
-    const [cardHolder, setCardHolder] = useState("Ruslan");
-    const [cardNumber, setCardNumber] = useState("1234 5678 3456 8765");
-    const [expiry, setExpiry] = useState("12/2026");
+  const [cardHolder, setCardHolder] = useState("Ruslan");
+  const [cardNumber, setCardNumber] = useState("1234 5678 3456 8765");
+  const [expiry, setExpiry] = useState("12/2026");
   return (
     <div className="card-container">
       <div className="card-preview">
@@ -33,7 +33,7 @@ function CreditCard() {
             onChange={(e) => setCardNumber(e.target.value)}
             type="text"
             placeholder="Card number"
-            maxlength="19"
+            maxLength={19}
           />
         </div>
         <div className="form-row">

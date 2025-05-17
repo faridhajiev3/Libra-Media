@@ -78,6 +78,7 @@ $mobile-large: 500px;
     .mobile-menu-button {
       display: block;
 
+
       @media (min-width: $tablet) {
         display: none;
       }
@@ -91,6 +92,7 @@ $mobile-large: 500px;
         .icon {
           height: 24px;
           width: 24px;
+
         }
       }
     }
@@ -99,6 +101,12 @@ $mobile-large: 500px;
   .nav-links.mobile {
     display: block;
     padding: 4px 0;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+
 
     @media (min-width: $tablet) {
       display: none;
@@ -106,7 +114,7 @@ $mobile-large: 500px;
 
     .nav-link {
       display: block;
-      padding: 8px 12px;
+      padding: 10px 12px;
       border-radius: 6px;
       color: #111111;
 
@@ -114,5 +122,12 @@ $mobile-large: 500px;
         background-color: #eee5db;
       }
     }
+
+    &.open {
+      max-height: 500px;
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
+
 }

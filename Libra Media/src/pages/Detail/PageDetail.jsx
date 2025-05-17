@@ -8,6 +8,9 @@ import { useParams } from "react-router-dom";
 import "../../scss/detail.scss";
 import { addToBasket } from "../../redux/slice/basketslice";
 import Comments from "../../components/comments";
+import ColorSelection from "./ColorSelection";
+import SizeSelection from "./SizeSelection";
+import ProductDetails from "./ProductDetails";
 
 function PageDetail() {
   const productData = {
@@ -37,7 +40,7 @@ function PageDetail() {
 
   const dispatch = useDispatch()
 
-  const handleAddToCart=(item)=>{
+  const handleAddToCart = (item) => {
     dispatch(addToBasket(item))
   }
   console.log(selectedDetail)
@@ -54,66 +57,17 @@ function PageDetail() {
 
           {/* Details */}
           <div className="product-details">
-            <div className="product-title">
-              <h1>{selectedDetail.title}</h1>
-              <div className="reviews">
-                <div className="stars">
-                  <CiStar className="star empty" />
-                  <CiStar className="star empty" />
-                  <CiStar className="star empty" />
-                </div>
-                <span>144 Reviews</span>
-                <span>285 Q&A</span>
-              </div>
-            </div>
+            <ProductDetails selectedDetail={selectedDetail}/>
 
             <div className="store-info">
-              {/* <p>{storeName}</p> */}
               <button>
                 <FaPencilAlt /> Ask question
               </button>
             </div>
 
-            <div className="color-selection">
-              <p>
-                Select Color: <span>{selectedColor}</span>
-              </p>
-              <div className="colors">
-                {productData.colors.map((color) => (
-                  <div
-                    key={color.name}
-                    onClick={() => setSelectedColor(color.name)}
-                    className={`color-box ${
-                      selectedColor === color.name ? "active" : ""
-                    }`}
-                  >
-                    <div
-                      style={{ backgroundColor: color.paint }}
-                      className="detail-color"
-                    ></div>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <ColorSelection selectedColor={selectedColor} productData={productData} setSelectedColor={setSelectedColor}/>
 
-            <div className="size-selection">
-              <p>
-                Select Size: <span>{selectedSize}</span>
-              </p>
-              <div className="sizes">
-                {productData.sizes.map((size) => (
-                  <div
-                    key={size}
-                    onClick={() => setSelectedSize(size)}
-                    className={`size-box ${
-                      selectedSize === size ? "active" : ""
-                    }`}
-                  >
-                    {size}
-                  </div>
-                ))}
-              </div>
-            </div>
+            <SizeSelection selectedSize={selectedSize} productData={productData} setSelectedSize={setSelectedSize}/>
 
             <div className="shipping-info">
               <div>
@@ -136,12 +90,12 @@ function PageDetail() {
 
             <div className="price-cart">
               <h2>${selectedDetail.price}</h2>
-              <button onClick={()=>handleAddToCart(selectedDetail)}>Add To Cart</button>
+              <button onClick={() => handleAddToCart(selectedDetail)}>Add To Cart</button>
             </div>
           </div>
         </div>
         <div>
-          <Comments/>
+          <Comments />
         </div>
       </div>
     </div>

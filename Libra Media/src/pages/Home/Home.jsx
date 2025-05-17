@@ -4,6 +4,7 @@ import NewCollection from "../../components/NewCollection";
 import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../../redux/slice/productSlice";
 import Products from "../../components/Products";
+import Check from "../../components/Check";
 
 function Home() {
   const dispatch = useDispatch();

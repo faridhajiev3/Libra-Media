@@ -21,7 +21,7 @@ function Products({ item }) {
 
     <div className="cart-item">
       <div className="image-container" onClick={() => handleClick(item)}>
-        <img src={item.image} alt="Pizza" />
+        <img src={item.image} alt="clothes" />
       </div>
       <div className="heart-icon">
         {isLiked ? (

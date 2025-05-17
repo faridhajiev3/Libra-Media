@@ -4,8 +4,6 @@ $desktop: 1024px;
 
 // Maps Container
 .maps-container {
-  max-width: 1200px;
-  margin: 0 auto;
   padding: 20px;
 
   @media (min-width: $tablet) {
@@ -157,4 +155,5 @@ $desktop: 1024px;
     height: 120px;
     resize: vertical;
   }
+
 }

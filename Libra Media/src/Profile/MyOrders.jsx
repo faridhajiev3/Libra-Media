@@ -1,43 +1,7 @@
 import React, { useState } from "react";
 import {FaChevronRight, FaArrowLeft, FaCheckSquare, FaMinusSquare} from "react-icons/fa";
-import flowerDress from "../../src/assets/flower_dress.png"
-import menJacket from "../../src/assets/men_jacket.png";
-import womanFlowerDress from "../../src/assets/woman_flower_dress.png";
 import "../scss/myorder.scss"
-
-const dataOrders = [
-  {
-    id: 1,
-    date: "13 December 2024",
-    price: 122,
-    status: "Completed",
-    checkState: "Completed",
-    images: [flowerDress, womanFlowerDress, menJacket],
-  },
-  {
-    id: 2,
-    date: "14 December 2024",
-    price: 98,
-    status: "Completed",
-    checkState: "Completed",
-    images: [flowerDress, menJacket],
-  },
-  {
-    id: 3,
-    date: "15 December 2024",
-    price: 55,
-    status: "Completed",
-    checkState: "Completed",
-    images: [flowerDress],
-  },
-  {
-    id: 4,
-    date: "16 December 2024",
-    price: 80,
-    status: "Returned",
-    images: [menJacket],
-  },
-];
+import { dataOrders } from "./ProfilData";
 
 function MyOrders() {
   const [orders, setOrders] = useState(dataOrders);

@@ -12,7 +12,7 @@ import { setSearch } from "../../redux/slice/searchSlice";
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const dispatch = useDispatch();
-  const {count} = useSelector((state)=> state.basket)
+  const { count } = useSelector((state) => state.basket)
   return (
     <nav className="navbar">
       <div className="navbar-container">
@@ -41,6 +41,9 @@ function Navbar() {
             <CiSearch className="search-icon" />
           </div>
 
+
+          {/* mobile navbar */}
+
           <div className="mobile-menu-button">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -55,18 +58,19 @@ function Navbar() {
           </div>
         </div>
 
-        {isMenuOpen &&
-          SidebarData.map((item, index) => (
-            <div className="nav-links mobile" key={index}>
-              <NavLink
-                to={item.path}
-                className="nav-link"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item.name}
-              </NavLink>
-            </div>
+        <div className={`nav-links mobile ${isMenuOpen ? "open" : ""}`}>
+          {SidebarData.map((item, index) => (
+            <NavLink
+              key={index}
+              to={item.path}
+              className="nav-link"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {item.name}
+            </NavLink>
           ))}
+        </div>
+
       </div>
     </nav>
   );

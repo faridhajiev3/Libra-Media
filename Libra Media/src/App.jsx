@@ -18,6 +18,7 @@ import { checkAuthState } from "./redux/slice/authSlice";
 import Profile from "./Profile/Profile";
 import MyOrders from "./Profile/MyOrders";
 import MyReturns from "./Profile/MyReturns";
+import Check from "./components/Check";
 
 const ProtectedRoute = ({ children }) => {
   const { isAuthenticated } = useSelector((state) => state.auth);
@@ -30,6 +31,7 @@ const ProtectedRoute = ({ children }) => {
 
 function App() {
   const dispatch = useDispatch();
+   const cartItems = useSelector((state) => state.basket.cart);
 
   useEffect(() => {
     dispatch(checkAuthState());
@@ -56,6 +58,7 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
         </Routes>
       </PageContainer>
+      <Check item={cartItems}/>
       <Footer />
     </>
   );

@@ -1,13 +1,21 @@
 import React, { useState } from "react";
 import "../scss/maps.scss"
 import { useNavigate } from "react-router-dom";
+import AddressManually from "./AddressManually";
+import Payment from "./Payment";
 
 function Maps() {
   const [open, setOpen] = useState(false);
+  const [openPayment, setOpenPayment] = useState(false);
   const navigate = useNavigate()
 
   const handleChange = () => {
     setOpen(!open);
+  };
+
+
+  const handlePayment = () => {
+    setOpenPayment(prev => !prev);
   };
   return (
     <div className="maps-container">
@@ -24,47 +32,15 @@ function Maps() {
       </div>
 
       <div className="map-actions">
-        <button className="btn btn-primary" onClick={()=>navigate("/credit")}>Confirm location</button>
+        <button className="btn btn-primary" onClick={handlePayment}>Confirm location</button>
         <button className="btn btn-secondary" onClick={handleChange}>
           {open ? "Hide manual entry" : "Enter address manually"}
         </button>
       </div>
-
-      <div className={`address-form ${open ? "address-form--visible" : ""}`}>
-        <div className="form-group">
-          <label htmlFor="fullName">Full Name</label>
-          <input type="text" id="fullName" placeholder="Enter your full name" />
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="phoneNumber">Phone Number</label>
-          <input
-            type="number"
-            id="phoneNumber"
-            placeholder="Enter your phone number"
-          />
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="city">City</label>
-          <select id="city">
-            <option value="">Select a city</option>
-            <option value="Ablaa">Ablaa</option>
-            <option value="Aba Al Seban">Aba Al Seban</option>
-            <option value="Abha">Abha</option>
-          </select>
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="address">Address Details</label>
-          <textarea
-            id="address"
-            placeholder="Enter your complete address" 
-          ></textarea>
-        </div>
-
-        <button className="btn btn-primary btn-submit">Submit Address</button>
-      </div>
+      <AddressManually open={open} />
+      {
+         openPayment?  <Payment handlePayment={handlePayment}/>: "" 
+      }
     </div>
   );
 }

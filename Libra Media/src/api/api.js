@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const fetchProducts = async () => {
-  const response = await axios.get("https://fakestoreapi.com/products");
+  const response = await axios.get("https://682105e9259dad2655ae474b.mockapi.io/vendo");
   return response.data;
 };
 
