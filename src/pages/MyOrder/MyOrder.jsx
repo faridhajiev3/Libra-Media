@@ -1,11 +1,16 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../scss/myorder.scss";
-import {FaChevronRight, FaArrowLeft, FaCheckSquare, FaMinusSquare} from "react-icons/fa";
-import flowerDress from "../assets/flower_dress.png";
-import menJacket from "../assets/men_jacket.png";
-import womanFlowerDress from "../assets/woman_flower_dress.png";
+import "../scss/myorders.scss";
+import {
+  FaChevronRight,
+  FaArrowLeft,
+  FaCheckSquare,
+  FaMinusSquare,
+} from "react-icons/fa";
+import flowerDress from "../../assets/images/flower_dress.png";
+import menJacket from "../../assets/images/men_jacket.png";
+import womanFlowerDress from "../../assets/images/woman_flower_dress.png";
 
 const dataOrders = [
   {

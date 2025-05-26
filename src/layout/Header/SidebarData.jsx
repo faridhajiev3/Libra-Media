@@ -1,6 +1,7 @@
-import { FaBox, FaHome, FaUser } from "react-icons/fa";
+import { FaCreditCard, FaFileContract, FaHome, FaLanguage, FaSignOutAlt, FaUser } from "react-icons/fa";
 import { BiCategory } from "react-icons/bi";
 import { FaRegHeart } from "react-icons/fa";
+import { FaLocationDot, FaPerson } from "react-icons/fa6";
 
 export const SidebarData = [
   {
@@ -23,10 +24,35 @@ export const SidebarData = [
     name: "Profile",
     icon: <FaUser />,
   },
+    {
+    path: "/personal-info",
+    name: "Personal Information",
+    icon: <FaPerson />,
+  },
   {
-    path: "/my-orders",
-    name: "My Orders",
-    icon: <FaBox />,
+    path: "/addresses",
+    name: "Addresses",
+    icon: <FaLocationDot />,
+  },
+    {
+    path: "/payment-methods",
+    name: "My payment methods",
+    icon: <FaCreditCard />,
+  },
+    {
+    path: "/terms",
+    name: "Terms and conditions",
+    icon: <FaFileContract />,
+  },
+    {
+    path: "/language",
+    name: "Language",
+    icon: <FaLanguage />,
+  },
+    {
+    path: "/logout",
+    name: "Logout",
+    icon: <FaSignOutAlt />,
   },
 ];
 

@@ -1,0 +1,93 @@
+.logout-page-bg {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+.order-detail-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.back-icon-box {
+  border: 1px solid var(--border-side);
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  &:hover {
+    background: #f5f5f5;
+  }
+}
+
+.back-icon {
+  font-size: 18px;
+  color: #111111;
+}
+
+.logout_title {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text-color);
+  margin-bottom: 35px;
+}
+
+.logout-modal {
+  text-align: center;
+  max-width: 400px;
+  margin-bottom: 80px;
+}
+
+.logout-subtitle {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.logout-text {
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+
+.logout-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.logout-btn {
+  color: #111111;
+  border: none;
+  border: 1.2px solid #111111;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  background: #fff;
+  transition: background-color 0.3s, color 0.3s;
+  &:active {
+    background: #111111;
+    color: #fff;
+  }
+}
+
+.cancel-btn {
+  background: #111111;
+  color: #fff;
+  border: 1.2px solid #111111;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+   &:active {
+    background: #fff;
+    color: #111111;
+  }
+}

@@ -14,6 +14,14 @@ import Login from "./pages/Login/login";
 import SignUp from "./pages/SignUp/SignUp";
 import Profile from "./Profile/Profile";
 import MyOrders from "./Profile/MyOrder";
+import Addresses from "./pages/Addresses/Addresses";
+import OrderDetail from "./Profile/OrderDetail";
+import Language from "./pages/Language/Language";
+import MyReturns from "./Profile/MyReturns";
+import MyPayment from "./pages/MyPayment/MyPayment";
+import PersonalInfo from "./pages/PersonalInformation/PersonalInfo";
+import TermsCondition from "./pages/TermsCondition/TermsConditions";
+import LogoutPage from "./pages/Logout/Logout";
 
 function App() {
   return (
@@ -32,6 +40,14 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/my-orders" element={<MyOrders />} />
+          <Route path="/order/:id" element={<OrderDetail />} />
+          <Route path="/my-returns" element={<MyReturns />} />
+          <Route path="/personal-info" element={<PersonalInfo />} />
+          <Route path="/payment-methods" element={<MyPayment />} />
+          <Route path="/addresses" element={<Addresses />} />
+          <Route path="/terms" element={<TermsCondition />} />
+          <Route path="/language" element={<Language />} />
+          <Route path="/logout" element={<LogoutPage />} />
         </Routes>
       </PageContainer>
       <Footer />

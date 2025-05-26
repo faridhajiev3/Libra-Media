@@ -1,0 +1,70 @@
+.container {
+  padding: 32px 16px;
+  border-radius: 12px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.payment_title{
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-bottom: 35px;
+}
+
+.order-detail-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.back-icon-box {
+  border: 1px solid var(--border-side);
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.back-icon {
+  font-size: 18px;
+  color: #111111;
+}
+
+.card-list {
+  margin-bottom: 24px;
+}
+
+.card-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 8px;
+  justify-content: space-between;
+
+  .card-logo {
+    width: 56px;
+    height: 36px;
+  }
+
+  .card_num{
+    font-size: 16px;
+    color: var(--text-color);
+    font-weight: 400;
+  }
+}
+
+.add-btn {
+  width: 100%;
+  background: #111111;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
