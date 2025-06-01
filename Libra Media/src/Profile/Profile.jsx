@@ -9,6 +9,13 @@ function Profile() {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <div className="menu-wrapper">
+      <div className="profile-header">
+        <div className="avatar"></div>
+        <div className="user-info">
+          <h2>Gul Majid</h2>
+          <p>gulkhar.majidova@gmail.com</p>
+        </div>
+      </div>
       <header className="header-nav">
         <div className="back-icon" onClick={() => setMenuOpen(true)}>
           <FaArrowLeft />
@@ -39,7 +46,7 @@ function Profile() {
           </div>
         </>
       )}
-      <Outlet/>
+      <Outlet />
     </div>
   );
 }

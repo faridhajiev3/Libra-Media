@@ -1,0 +1,35 @@
+
+.ace {
+    max-width: 100%;
+    margin: 20px;
+}
+
+.input-field {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 2px solid #E8E8E8;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.input-field[readonly] {
+    border-color: #ccc;
+    background-color: #f5f5f5;
+}
+
+.ace .buttonUpdate {
+    padding: 12px 20px;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.ace .buttonUpdate:hover {
+    background-color: #000000;
+}
+
+// payment-option

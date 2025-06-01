@@ -5,6 +5,11 @@ export const fetchProducts = async () => {
   return response.data;
 };
 
+export const fetchCategory = async ()=>{
+  const response = await axios.get("https://682105e9259dad2655ae474b.mockapi.io/category")
+  return response.data
+}
+
 
 export const fetchRegistration = async (userData) => {
   const response = await axios.post("https://66d06634181d059277de6dbc.mockapi.io/login", userData);

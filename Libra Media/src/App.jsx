@@ -19,6 +19,12 @@ import Profile from "./Profile/Profile";
 import MyOrders from "./Profile/MyOrders";
 import MyReturns from "./Profile/MyReturns";
 import Check from "./components/Check";
+import ShippingAddress from "./pages/Shipping/ShippingAddress";
+import OrderDetail from "./Profile/OrderDetail";
+import PersonalInformation from "./Profile/PersonalInformation";
+import FilterBar from "./components/FilterBar";
+import Addresses from "./Profile/Addresses";
+import LanguageSelector from "./Profile/LanguageSelector";
 
 const ProtectedRoute = ({ children }) => {
   const { isAuthenticated } = useSelector((state) => state.auth);
@@ -31,7 +37,7 @@ const ProtectedRoute = ({ children }) => {
 
 function App() {
   const dispatch = useDispatch();
-   const cartItems = useSelector((state) => state.basket.cart);
+  const cartItems = useSelector((state) => state.basket.cart);
 
   useEffect(() => {
     dispatch(checkAuthState());
@@ -49,16 +55,21 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/map" element={<Maps />} />
           <Route path="/credit" element={<CreditCard />} />
+          <Route path="/shipping" element={<ShippingAddress />} />
+          <Route path="/filter" element={<FilterBar />} />
           <Route path="/profil" element={<Profile />}>
-            <Route index element={<MyOrders />} />
             <Route path="myorder" element={<MyOrders />} />
             <Route path="myreturn" element={<MyReturns />} />
+            <Route path="information" element={<PersonalInformation />} />
+            <Route path="address" element={<Addresses />} />
+            <Route path="language" element={<LanguageSelector />} />
           </Route>
+          <Route path="/orderdetail" element={<OrderDetail />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
         </Routes>
       </PageContainer>
-      <Check item={cartItems}/>
+      {/* <Check item={cartItems} /> */}
       <Footer />
     </>
   );

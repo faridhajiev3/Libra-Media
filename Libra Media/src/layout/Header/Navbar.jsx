@@ -6,27 +6,32 @@ import { IoMdClose } from "react-icons/io";
 import { CiSearch } from "react-icons/ci";
 import "../../scss/navbar.scss";
 import { SidebarData } from "./SidebarData";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux"; 
 import { setSearch } from "../../redux/slice/searchSlice";
+import { useTranslation } from "react-i18next";
+
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const dispatch = useDispatch();
   const { count } = useSelector((state) => state.basket)
+
+  const { i18n, t } = useTranslation();
+
   return (
-    <nav className="navbar">
+    <nav className="navbarmain">
       <div className="navbar-container">
         <div className="nav-content">
-          <div className="logo">
-            <NavLink to="/" className="logo-text">
+          <div className="logoo">
+            <NavLink to="/" className="logotext">
               Vendo App
             </NavLink>
           </div>
 
           <div className="nav-links desktop">
             {SidebarData.map((item, index) => (
-              <NavLink key={index} to={item.path} className="nav-link">
-                {item.name}
+              <NavLink key={index} to={item.path} className="nav-li">
+                {t(item.nameKey)}
               </NavLink>
             ))}
           </div>
@@ -40,6 +45,17 @@ function Navbar() {
             />
             <CiSearch className="search-icon" />
           </div>
+{/* 
+          <div className="language-select">
+            <button
+              onClick={() => i18n.changeLanguage('az')}
+              className={i18n.language === 'az' ? 'active-lang' : ''}
+            >AZE</button>
+            <button
+              onClick={() => i18n.changeLanguage('en')}
+              className={i18n.language === 'en' ? 'active-lang' : ''}
+            >ENG</button>
+          </div> */}
 
 
           {/* mobile navbar */}
@@ -63,13 +79,14 @@ function Navbar() {
             <NavLink
               key={index}
               to={item.path}
-              className="nav-link"
+              className="nav-li"
               onClick={() => setIsMenuOpen(false)}
             >
-              {item.name}
+              {t(item.nameKey)}
             </NavLink>
           ))}
         </div>
+
 
       </div>
     </nav>

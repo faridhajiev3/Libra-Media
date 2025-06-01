@@ -2,7 +2,7 @@
 $tablet: 768px;
 $mobile-large: 500px;
 
-.navbar {
+.navbarmain {
   background-color: #fff;
 
   .nav-content {
@@ -11,8 +11,31 @@ $mobile-large: 500px;
     align-items: center;
     padding: 20px 0;
 
-    .logo {
-      .logo-text {
+    .language-select {
+      margin-left: 16px;
+
+
+      button{
+        padding: 8px;
+        background-color: #fafafa;
+        border: none;
+        outline: none;
+        margin: 0 0 0 5px;
+      }
+    }
+
+    @media (max-width: $tablet) {
+      .language-select {
+        margin-top: 10px;
+        overflow: hidden;
+        display: none;
+      }
+    }
+
+
+    .logoo {
+      .logotext {
+        text-decoration: none;
         font-size: 20px;
         font-weight: bold;
         color: #111111;
@@ -27,8 +50,9 @@ $mobile-large: 500px;
 
     .nav-links.desktop {
       display: none;
-
-      .nav-link {
+      
+      .nav-li {
+        text-decoration: none;
         margin: 0 12px;
         padding: 6px 12px;
         color: #111111;
@@ -112,11 +136,12 @@ $mobile-large: 500px;
       display: none;
     }
 
-    .nav-link {
+    .nav-li {
       display: block;
       padding: 10px 12px;
       border-radius: 6px;
       color: #111111;
+      text-decoration: none;
 
       &:hover {
         background-color: #eee5db;

@@ -57,11 +57,22 @@
         border-radius: 8px;
         transition: border-color 0.2s;
 
+
+
         &:focus {
           outline: none;
           border-color: #704f38;
           box-shadow: 0 0 0 2px rgba(112, 79, 56, 0.15);
         }
+      }
+
+      small {
+        color: red;
+        display: none;
+      }
+
+      .smalll {
+        display: block;
       }
     }
 
@@ -71,6 +82,20 @@
 
       .form-group {
         flex: 1;
+      }
+    }
+
+    .addToCard {
+      text-align: center;
+
+      button {
+        padding: 10px 16px;
+        width: 80%;
+        background-color: #000;
+        color: #fff;
+        border-radius: 10px;
+        font-size: 16px;
+        cursor: pointer;
       }
     }
   }

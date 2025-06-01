@@ -1,0 +1,44 @@
+.location {
+    // max-width: 100%;
+    .address-card {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 10px;
+        margin-bottom: 10px;
+        background-color: #fff;
+        // width: 400px;
+
+        .address-card span {
+            color: #888;
+            font-size: 14px;
+        }
+
+        .address-card p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        .address-card .edit {
+            color: #1976d2;
+            font-size: 14px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+    }
+
+}
+
+
+.buttonaddress {
+    padding: 10px;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.buttonaddress:hover {
+    background-color: #333;
+}

@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import {FaChevronRight, FaArrowLeft, FaCheckSquare, FaMinusSquare} from "react-icons/fa";
 import "../scss/myorder.scss"
 import { dataOrders } from "./ProfilData";
+import { useNavigate } from "react-router-dom";
 
 function MyOrders() {
-  const [orders, setOrders] = useState(dataOrders);
+  const [orders, setOrders] = useState(dataOrders); 
   const goBack = () => {
     window.history.back();
   };
+  const navigate = useNavigate()
 
   return (
     <div className="orders-container">
@@ -54,7 +56,7 @@ function MyOrders() {
                   <span className="order-date">{order.date}</span>
                   <span className="order-price">${order.price}</span>
                 </div>
-                <FaChevronRight className="chevron-btn" />
+                <FaChevronRight onClick={()=> navigate("/orderdetail")} className="chevron-btn" />
               </div>
             </div>
           </div>

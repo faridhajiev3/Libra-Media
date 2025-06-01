@@ -6,10 +6,10 @@ import Payment from "./Payment";
 
 function Maps() {
   const [open, setOpen] = useState(false);
-  const [openPayment, setOpenPayment] = useState(false);
+  const [openPayment, setOpenPayment] = useState(false); 
   const navigate = useNavigate()
 
-  const handleChange = () => {
+  const handleChange = () => { 
     setOpen(!open);
   };
 
@@ -32,7 +32,8 @@ function Maps() {
       </div>
 
       <div className="map-actions">
-        <button className="btn btn-primary" onClick={handlePayment}>Confirm location</button>
+        <button className="btn btn-primary">Confirm location</button>
+        <button className="btn btn-primary" onClick={handlePayment}>Pay</button>
         <button className="btn btn-secondary" onClick={handleChange}>
           {open ? "Hide manual entry" : "Enter address manually"}
         </button>

@@ -2,7 +2,7 @@ import React from "react";
 import "../../scss/signup.scss";
 import { NavLink } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
-import { FaApple } from "react-icons/fa";
+import { FaApple } from "react-icons/fa"; 
 
 function SignUp() {
   return (

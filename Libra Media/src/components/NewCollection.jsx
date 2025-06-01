@@ -3,7 +3,7 @@ import collection from "../assets/world1.png";
 
 function NewCollection() {
   return (
-    <div className="row">
+    <div className="roww"> 
       <div className="eng">
         <div className="mostly">
           <div className="port">

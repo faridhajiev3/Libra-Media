@@ -3,7 +3,7 @@ import { fetchProducts } from "../../api/api";
 
 const initialState = {
   items: [],
-  status: "idle",
+  status: "idle", 
 };
 
 export const getProducts = createAsyncThunk(
@@ -14,7 +14,7 @@ export const getProducts = createAsyncThunk(
   }
 );
 
-const productsSlice = createSlice({
+const productsSlice = createSlice({ 
   name: "products",
   initialState,
   reducers: {},

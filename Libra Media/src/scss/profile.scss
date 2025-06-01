@@ -30,6 +30,21 @@
   &.open {
     left: 0;
   }
+
+  @media (max-width:1000px) {
+    width: 40%;
+  }
+
+  @media (max-width:700px) {
+    width: 50%;
+  }
+
+  @media (max-width:500px) {
+    width: 60%;
+  }
+  @media (max-width:480px) {
+    width: 70%;
+  }
 }
 
 .mobile-blur-overlay {
@@ -70,4 +85,35 @@
   color: var(--grey-color);
   width: 24px;
   height: 24px;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  margin: 20px 0;
+
+  @media (max-width:400px) {
+    flex-direction: column;
+  }
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.user-info h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.user-info p {
+  margin: 4px 0 0;
+  color: #777;
 }

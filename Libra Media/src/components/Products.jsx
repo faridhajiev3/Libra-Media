@@ -9,7 +9,7 @@ import { setWishList } from "../redux/slice/wishlistSlice";
 function Products({ item }) {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { likes } = useSelector((state) => state.wishlist);
+  const { likes } = useSelector((state) => state.wishlist); 
 
   const handleClick = (item) => {
     dispatch(setSelectedDetail(item));

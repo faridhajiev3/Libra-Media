@@ -1,0 +1,210 @@
+.my-returns-container {
+    width: 100%;
+    // max-width: 1440px;
+    margin: 0 auto;
+    padding: 20px 16px 32px 16px;
+}
+
+.returns-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 28px;
+
+    .back-icon-box {
+        border: 1px solid var(--border-side);
+        padding: 8px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    .back-icon {
+        font-size: 18px;
+        color: #111111;
+    }
+
+    span {
+        font-size: 20px;
+        font-weight: 500;
+        color: #222;
+    }
+}
+
+.returns_title {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.returns-product-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 24px;
+
+    img {
+        width: 48px;
+        height: 86px;
+        object-fit: cover;
+        border-radius: 6px;
+        flex-shrink: 0;
+    }
+
+    .returns-product-info {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        min-width: 0;
+
+        .returns-product-title {
+            font-size: 14px;
+            font-weight: 400;
+            color: var(--text-color);
+            max-width: 284px;
+        }
+
+        .returns-product-size,
+        .returns-product-qty {
+            font-weight: 400;
+            font-size: 12px;
+            color: var(--grey-color);
+        }
+
+        .returns-product-price {
+            font-size: 18px;
+            font-weight: 600;
+            color: #111;
+            margin-top: 2px;
+
+            .old-price {
+                font-size: 13px;
+                color: #bbb;
+                text-decoration: line-through;
+                margin-left: 6px;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+.returns-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 28px;
+
+    .returns-label {
+        font-size: 14px;
+        color: var(--text-color);
+        font-weight: 400;
+        margin-bottom: 4px;
+    }
+
+    .returns-select {
+        width: 100%;
+        padding: 14px 16px 14px 16px;
+        border: 1px solid var(--border-side);
+        border-radius: 6px;
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--text-primary);
+        background: #fafafa;
+        appearance: none;
+        outline: none;
+    }
+
+    .chevron-down {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        width: 20px;
+        height: 20px;
+        transform: translateY(-50%);
+        pointer-events: none;
+        color: #666;
+    }
+
+    .add-photo-btn {
+        background: none;
+        border: none;
+        color: var(--text-color);
+        font-size: 16px;
+        font-weight: 400;
+        padding: 0;
+        cursor: pointer;
+        text-align: left;
+        margin-top: 4px;
+    }
+
+    .returns-textarea {
+        width: 100%;
+        min-height: 70px;
+        border: 1px solid #e8e8e8;
+        border-radius: 8px;
+        padding: 12px 10px;
+        font-size: 14px;
+        color: #222;
+        background: #fafafa;
+        resize: none;
+        outline: none;
+
+        &::placeholder {
+            color: #bbb;
+            font-size: 14px;
+        }
+    }
+}
+
+.returns-submit-btn {
+    width: 100%;
+    padding: 14px 0;
+    background: #444;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    margin-top: 12px;
+    cursor: pointer;
+    transition: background 0.2s;
+
+    &:active {
+        background: #222;
+    }
+}
+
+@media (max-width: 600px) {
+    .my-returns-container {
+        padding: 12px 6px 24px 6px;
+        max-width: 100vw;
+    }
+
+    .returns-header span {
+        font-size: 17px;
+    }
+
+    .returns-product-card img {
+        width: 44px;
+        height: 58px;
+    }
+
+    .returns-product-info .returns-product-title {
+        max-width: 110px;
+        font-size: 13px;
+    }
+
+    .returns-product-info .returns-product-price {
+        font-size: 15px;
+    }
+
+    .returns-form .returns-label,
+    .returns-form .returns-select,
+    .returns-form .returns-textarea {
+        font-size: 13px;
+    }
+
+    .returns-submit-btn {
+        font-size: 14px;
+        padding: 12px 0;
+    }
+}

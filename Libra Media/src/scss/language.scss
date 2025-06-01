@@ -1,0 +1,32 @@
+.language-selector {
+    // width: 200px;
+    // font-family: Arial, sans-serif;
+
+    .language-option {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        cursor: pointer;
+        border-bottom: 1px solid #e0e0e0;
+        font-size: 16px;
+        color: #333;
+
+        &:hover {
+            background-color: #f5f5f5;
+        }
+
+        &.selected {
+            font-weight: bold;
+        }
+
+        .checkmark {
+            color: #000;
+            font-size: 14px;
+        }
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}

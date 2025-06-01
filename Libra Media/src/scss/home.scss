@@ -2,7 +2,7 @@
 
 .container-slider,
 .container-likes {
-  .row {
+  .roww {
     .eng {
       border-radius: 32px;
       background: #eee5db;
@@ -28,41 +28,61 @@
             margin-bottom: 16px;
           }
 
-          h4 {
-            color: #898786;
-            font-size: 22px;
-            font-weight: 600;
-            margin-bottom: 24px;
-          }
-
-          button {
-            padding: 12px 28px;
-            font-size: 18px;
-            font-weight: 500;
-            color: #fff;
-            background-color: #704f38;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-
-            &:hover {
-              background-color: #5a3f2e;
+          @media (max-width: 867px) {
+            h1 {
+              font-size: 36px;
             }
-          }
-        }
-
-        .image-person {
-          img {
-            width: 350px;
-            max-width: 100%;
-            height: auto;
-            border-radius: 12px;
           }
         }
       }
     }
+
+    h4 {
+      color: #898786;
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 867px) {
+      h4 {
+        font-size: 16px;
+      }
+    }
+
+    button {
+      padding: 12px 28px;
+      font-size: 18px;
+      font-weight: 500;
+      color: #fff;
+      background-color: #704f38;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #5a3f2e;
+      }
+    }
+
+    @media (max-width: 867px) {
+      button {
+        font-size: 16px;
+      }
+    }
+
+  }
+
+  .image-person {
+    img {
+      width: 350px;
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
   }
 }
+
 
 .cards {
   display: grid;
@@ -70,6 +90,10 @@
   padding: 0 20px;
   margin: 60px 0 20px 0;
   gap: 30px;
+
+  @media (max-width:400px) {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
 
   .loading-text {
     text-align: center;
@@ -155,18 +179,6 @@
 
       .port {
         align-items: center;
-
-        h1 {
-          font-size: 36px;
-        }
-
-        h4 {
-          font-size: 18px;
-        }
-
-        button {
-          font-size: 16px;
-        }
       }
 
       .image-person {
@@ -174,4 +186,10 @@
       }
     }
   }
+}
+
+// filter
+.filter-item{
+  // display: inline-block;
+  text-align: right;
 }

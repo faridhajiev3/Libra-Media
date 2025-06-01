@@ -6,7 +6,7 @@ $desktop: 1024px;
 .maps-container {
   padding: 20px;
 
-  @media (min-width: $tablet) {
+  @media (min-width: $tablet) { 
     padding: 30px;
   }
 }
@@ -53,8 +53,8 @@ $desktop: 1024px;
 .btn,
 .btn-primary,
 .btn-secondary {
-  background-color: #704f38;
-  color: white;
+  // background-color: #704f38;
+  // color: white;
   border: none;
   border-radius: 4px;
   padding: 12px 20px;

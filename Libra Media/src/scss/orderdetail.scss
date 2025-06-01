@@ -1,0 +1,174 @@
+.forder-detail-container {
+    padding: 20px;
+    margin: 0 auto;
+    // max-width: 1200px;
+}
+
+.forder-detail-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.fback-icon-box {
+    border: 1px solid var(--border-side);
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.fback-icon {
+    font-size: 18px;
+    color: #111111;
+}
+
+.forder-detail-header h2 {
+    font-weight: 500;
+    color: var(--text-color);
+    font-size: 18px;
+    margin: 0;
+}
+
+.forder-detail-content {
+    font-size: 16px;
+    line-height: 1.6;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // flex-direction: column;
+}
+
+.fsection {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid var(--border-side);
+    border-radius: 6px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.fsection h3 {
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--text-color);
+}
+
+.fsection .ftracking_title,
+.fname_title,
+.fphone_title,
+.fpayment-method {
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--grey-color);
+}
+
+.fsection .fdiscount {
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--success-color);
+}
+
+.forder-detail-images {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.fproduct-card {
+    display: flex;
+    align-items: stretch;
+    gap: 15px;
+    padding: 15px 0;
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+}
+
+.fimage-wrapper {
+    position: relative;
+    width: 74px;
+    height: 114px;
+    flex-shrink: 0;
+}
+
+.fimage-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.fimage-wrapper .findex {
+    position: absolute;
+    top: 0;
+    right: 6px;
+    width: 20px;
+    height: 20px;
+    background-color: #111;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.finfo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.fsize {
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--grey-color);
+}
+
+.fname {
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+.fprice {
+    font-weight: 600;
+    font-size: 18px;
+    color: #111111;
+}
+
+.fold-price {
+    text-decoration: line-through;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--grey-color);
+    margin-left: 5px;
+}
+
+.fdetail-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.fdetail-buttons .fdetail-btn {
+    padding: 8px 20px;
+    background-color: #fff;
+    color: #111111;
+    border: 1px solid #E8E8E8;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.fdetail-buttons .fdetail-btn.factive {
+    color: #111111;
+    border: 1px solid #111111;
+    padding: 8px 16px 8px 16px;
+}

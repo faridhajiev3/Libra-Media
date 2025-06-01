@@ -20,6 +20,16 @@ export const ProfilData = [
     name: "Personal information",
     icon: <FaHome />,
   },
+  {
+    path: "address",
+    name: "Addresses",
+    icon: <FaHome />,
+  },
+  {
+    path: "language",
+    name: "Select language",
+    icon: <FaHome />,
+  },
 ];
 
 

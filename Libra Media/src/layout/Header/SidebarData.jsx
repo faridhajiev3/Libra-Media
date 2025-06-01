@@ -2,32 +2,32 @@ import { FaHome } from "react-icons/fa";
 import { BiCategory } from "react-icons/bi";
 import { FaRegHeart } from "react-icons/fa";
 import { TiShoppingCart } from "react-icons/ti";
-import { IoPerson } from "react-icons/io5";
+import { IoPerson } from "react-icons/io5"; 
 
 export const SidebarData = [
   {
     path: "/",
-    name: "Home",
+    nameKey: "home",
     icon: <FaHome />,
   },
   {
     path: "/category",
-    name: "Category",
+    nameKey: "category",
     icon: <BiCategory />,
   },
   {
     path: "/like",
-    name: "Like",
+    nameKey: "like",
     icon: <FaRegHeart />,
   },
   {
     path: "/profil",
-    name: "Profile",
+    nameKey: "profile",
     icon: <IoPerson />,
   },
   {
     path: "/cart",
-    name: "Cart",
+    nameKey: "cart",
     icon: <TiShoppingCart />,
   },
 ];

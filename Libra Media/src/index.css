@@ -5,6 +5,8 @@
   list-style: none;
   box-sizing: border-box;
   font-family: "Onest", sans-serif;
+  overflow-y: scroll;
+  scrollbar-width: none;
 }
 
 :root {

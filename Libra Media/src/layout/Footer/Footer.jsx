@@ -10,8 +10,12 @@ import "../../scss/footer.scss";
 import { SidebarData } from "../Header/SidebarData";
 import SocialIcon from "./SocialIcon";
 import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 function Footer() {
+  const { i18n, t } = useTranslation();
+
+
   const socialIcons = [
     { icon: <FaFacebookF size={16} />, href: "#" },
     { icon: <FaXTwitter size={16} />, href: "#" },
@@ -24,14 +28,14 @@ function Footer() {
       icon: <FaLocationDot />,
       lines: ["United Arab Emirates", "689 Lynn Street Dubai"],
     },
-    {
-      icon: <FaPhoneAlt />,
-      lines: ["(617)-276-8031", "(617)-276-8031"],
-    },
-    {
-      icon: <SlEnvolopeLetter />,
-      lines: ["admin@media.com", "support@media.com"],
-    },
+    // {
+    //   icon: <FaPhoneAlt />,
+    //   lines: ["(617)-276-8031", "(617)-276-8031"],
+    // },
+    // {
+    //   icon: <SlEnvolopeLetter />,
+    //   lines: ["admin@media.com", "support@media.com"],
+    // },
   ];
 
   const openHours = [
@@ -86,8 +90,8 @@ function Footer() {
             <nav>
               <ul className="footer-links">
                 {SidebarData.map((link, index) => (
-                  <NavLink className="sidebar-links" to={link.path} key={index}>
-                    {link.name}
+                  <NavLink className="sidebar-links" to={link.path} key={index}> 
+                    {t(link.nameKey)}
                   </NavLink>
                 ))}
               </ul>
