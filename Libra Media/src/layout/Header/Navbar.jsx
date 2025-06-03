@@ -45,18 +45,6 @@ function Navbar() {
             />
             <CiSearch className="search-icon" />
           </div>
-{/* 
-          <div className="language-select">
-            <button
-              onClick={() => i18n.changeLanguage('az')}
-              className={i18n.language === 'az' ? 'active-lang' : ''}
-            >AZE</button>
-            <button
-              onClick={() => i18n.changeLanguage('en')}
-              className={i18n.language === 'en' ? 'active-lang' : ''}
-            >ENG</button>
-          </div> */}
-
 
           {/* mobile navbar */}
 

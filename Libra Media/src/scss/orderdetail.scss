@@ -153,6 +153,10 @@
 .fdetail-buttons {
     display: flex;
     gap: 10px;
+
+    @media (max-width:350px) {
+        flex-direction: column;
+    }
 }
 
 .fdetail-buttons .fdetail-btn {

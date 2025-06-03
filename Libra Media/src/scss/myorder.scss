@@ -42,7 +42,8 @@
   border-radius: 6px;
   border: 1px solid var(--border-side);
 
-  @media (min-width: 600px), (min-width: 378px) {
+  @media (min-width: 600px),
+  (min-width: 378px) {
     flex-direction: row;
   }
 }
@@ -100,7 +101,8 @@
   justify-content: space-between;
   gap: 8px;
 
-  @media (min-width: 600px), (min-width: 378px) {
+  @media (min-width: 600px),
+  (min-width: 378px) {
     flex-direction: row;
     align-items: center;
     margin-top: 10px;
@@ -116,7 +118,8 @@
   font-weight: 500;
   color: var(--text-color);
 
-  @media (min-width: 600px), (min-width: 378px) {
+  @media (min-width: 600px),
+  (min-width: 378px) {
     align-items: center;
   }
 }

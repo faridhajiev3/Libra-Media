@@ -21,18 +21,21 @@ function Category() {
       <div className="cards">
         {status === "loading" ? (
           <p className="loading-text">Loading...</p>
-        ) : (
-          itemsCategory.map((item) => (
-            <div className="cart-item" key={item.id}>
-              <div className="image-container">
-                <img src={item.img} alt="clothes" />
+        ) : status === "failed" ? (
+          <p className="error-text">Kateqoriyaları əldə etmək alınmadı. Yenidən cəhd edin.</p>
+        )
+          : (
+            itemsCategory.map((item) => (
+              <div className="cart-item" key={item.id}>
+                <div className="image-container">
+                  <img src={item.img} alt="clothes" />
+                </div>
+                <div className="item-details">
+                  <h3>{item.category}</h3>
+                </div>
               </div>
-              <div className="item-details">
-                <h3>{item.category}</h3>
-              </div>
-            </div>
-          ))
-        )}
+            ))
+          )}
       </div>
     </div>
   );

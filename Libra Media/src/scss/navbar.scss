@@ -11,27 +11,6 @@ $mobile-large: 500px;
     align-items: center;
     padding: 20px 0;
 
-    .language-select {
-      margin-left: 16px;
-
-
-      button{
-        padding: 8px;
-        background-color: #fafafa;
-        border: none;
-        outline: none;
-        margin: 0 0 0 5px;
-      }
-    }
-
-    @media (max-width: $tablet) {
-      .language-select {
-        margin-top: 10px;
-        overflow: hidden;
-        display: none;
-      }
-    }
-
 
     .logoo {
       .logotext {
@@ -67,7 +46,7 @@ $mobile-large: 500px;
         border-bottom: solid 3px #f15f2a;
       }
 
-      @media (min-width: $tablet) {
+      @media (min-width: 850px) {
         display: flex;
         align-items: center;
       }
@@ -79,9 +58,9 @@ $mobile-large: 500px;
       .search-input {
         background-color: #fff;
         color: #757575;
-        padding: 10px 16px 10px 38px;
-        border: #c9cacd solid 2px;
-        border-radius: 2px;
+        padding: 8px 16px 8px 32px;
+        border: #c9cacd solid 1px;
+        border-radius: 8px;
         // border: none;
         width: 200px;
         outline: none;
@@ -89,13 +68,11 @@ $mobile-large: 500px;
 
       .search-icon {
         position: absolute;
-        left: 12px;
+        left: 6px;
         top: 50%;
         transform: translateY(-50%);
         color: #c9cacd;
         font-size: 20px;
-        // height: 16px;
-        // width: 16px;
       }
     }
 
@@ -103,7 +80,7 @@ $mobile-large: 500px;
       display: block;
 
 
-      @media (min-width: $tablet) {
+      @media (min-width: 850px) {
         display: none;
       }
 
@@ -132,7 +109,7 @@ $mobile-large: 500px;
     transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
 
 
-    @media (min-width: $tablet) {
+    @media (min-width: 850px) {
       display: none;
     }
 

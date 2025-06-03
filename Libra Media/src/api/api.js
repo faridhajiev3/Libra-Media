@@ -5,7 +5,7 @@ export const fetchProducts = async () => {
   return response.data;
 };
 
-export const fetchCategory = async ()=>{
+export const fetchCategory = async () => {
   const response = await axios.get("https://682105e9259dad2655ae474b.mockapi.io/category")
   return response.data
 }
