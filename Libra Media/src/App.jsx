@@ -10,7 +10,7 @@ import Cart from "./pages/Cart/Cart";
 import Maps from "./components/Maps";
 import Wishllst from "./pages/Wishlist/Wishllst";
 import CreditCard from "./components/CreditCard";
-import Login from "./pages/Login/login";
+import Login from "./pages/Login/Login";
 import SignUp from "./pages/SignUp/SignUp";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
