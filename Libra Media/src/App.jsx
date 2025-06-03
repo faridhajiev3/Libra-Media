@@ -45,8 +45,8 @@ function App() {
 
   return (
     <>
+      <Navbar />
       <PageContainer>
-        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/detail/:id" element={<PageDetail />} />

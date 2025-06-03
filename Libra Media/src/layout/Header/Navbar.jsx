@@ -6,7 +6,7 @@ import { IoMdClose } from "react-icons/io";
 import { CiSearch } from "react-icons/ci";
 import "../../scss/navbar.scss";
 import { SidebarData } from "./SidebarData";
-import { useDispatch, useSelector } from "react-redux"; 
+import { useDispatch, useSelector } from "react-redux";
 import { setSearch } from "../../redux/slice/searchSlice";
 import { useTranslation } from "react-i18next";
 
@@ -15,18 +15,16 @@ function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const dispatch = useDispatch();
   const { count } = useSelector((state) => state.basket)
-
+  
   const { i18n, t } = useTranslation();
 
   return (
     <nav className="navbarmain">
       <div className="navbar-container">
         <div className="nav-content">
-          <div className="logoo">
-            <NavLink to="/" className="logotext">
-              Vendo App
-            </NavLink>
-          </div>
+          <NavLink to="/" className="logotext">
+            Vendo App
+          </NavLink>
 
           <div className="nav-links desktop">
             {SidebarData.map((item, index) => (
@@ -46,20 +44,12 @@ function Navbar() {
             <CiSearch className="search-icon" />
           </div>
 
-          {/* mobile navbar */}
-
-          <div className="mobile-menu-button">
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="menu-btn"
-            >
-              {isMenuOpen ? (
-                <IoMdClose className="icon" />
-              ) : (
-                <RxHamburgerMenu className="icon" />
-              )}
-            </button>
-          </div>
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="mobile-menu-button"
+          >
+            {isMenuOpen ? <IoMdClose className="icon" /> : <RxHamburgerMenu className="icon" />}
+          </button>
         </div>
 
         <div className={`nav-links mobile ${isMenuOpen ? "open" : ""}`}>
@@ -74,8 +64,6 @@ function Navbar() {
             </NavLink>
           ))}
         </div>
-
-
       </div>
     </nav>
   );

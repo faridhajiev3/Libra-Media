@@ -1,35 +1,41 @@
-// responsivlik
 $tablet: 768px;
 $mobile-large: 500px;
 
 .navbarmain {
   background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  .navbar-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
 
   .nav-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
+    padding: 16px 0;
 
+    .logotext {
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: bold;
+      color: #111111;
+      text-transform: uppercase;
+      display: none;
 
-    .logoo {
-      .logotext {
-        text-decoration: none;
-        font-size: 20px;
-        font-weight: bold;
-        color: #111111;
-        text-transform: uppercase;
-        display: none;
-
-        @media (min-width: $mobile-large) {
-          display: block;
-        }
+      @media (min-width: $mobile-large) {
+        display: block;
       }
     }
 
     .nav-links.desktop {
       display: none;
-      
+
       .nav-li {
         text-decoration: none;
         margin: 0 12px;
@@ -40,10 +46,10 @@ $mobile-large: 500px;
         &:hover {
           color: #d1d5db;
         }
-      }
 
-      .active {
-        border-bottom: solid 3px #f15f2a;
+        &.active {
+          border-bottom: 3px solid #f15f2a;
+        }
       }
 
       @media (min-width: 850px) {
@@ -59,9 +65,8 @@ $mobile-large: 500px;
         background-color: #fff;
         color: #757575;
         padding: 8px 16px 8px 32px;
-        border: #c9cacd solid 1px;
+        border: 1px solid #c9cacd;
         border-radius: 8px;
-        // border: none;
         width: 200px;
         outline: none;
       }
@@ -78,40 +83,28 @@ $mobile-large: 500px;
 
     .mobile-menu-button {
       display: block;
+      background: none;
+      border: none;
+      cursor: pointer;
 
+      .icon {
+        height: 24px;
+        width: 24px;
+        color: #111111;
+      }
 
       @media (min-width: 850px) {
         display: none;
-      }
-
-      .menu-btn {
-        background: none;
-        border: none;
-        color: #111111;
-        cursor: pointer;
-
-        .icon {
-          height: 24px;
-          width: 24px;
-
-        }
       }
     }
   }
 
   .nav-links.mobile {
-    display: block;
-    padding: 4px 0;
     max-height: 0;
     overflow: hidden;
     opacity: 0;
     transform: translateY(-10px);
     transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
-
-
-    @media (min-width: 850px) {
-      display: none;
-    }
 
     .nav-li {
       display: block;
@@ -130,6 +123,9 @@ $mobile-large: 500px;
       transform: translateY(0);
       opacity: 1;
     }
-  }
 
+    @media (min-width: 850px) {
+      display: none;
+    }
+  }
 }
