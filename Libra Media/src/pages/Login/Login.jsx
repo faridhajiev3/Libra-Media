@@ -9,7 +9,7 @@ import { NavLink } from "react-router-dom";
 function Login() {
   const dispatch = useDispatch();
 
-  const { user } = useSelector((state) => state.auth); 
+  const { user } = useSelector((state) => state.auth);
 
   useEffect(() => {
     dispatch(loginUser());
@@ -24,25 +24,36 @@ function Login() {
           <span className="logo-icon">🏙</span>
           <span className="logo-text">DO</span>
         </div>
-        <input type="tel" placeholder="+971" className="login-input" />
-        <div className="password-wrapper">
-          <input
-            type="password"
-            placeholder="Password"
-            className="login-input"
-          />
-          <span className="show-toggle">Show</span>
-        </div>
 
-        <a href="#" className="forgot-password">
-          Forgot password?
-        </a>
+        <form >
+          <div className="input-wrapper">
+            <input
+              type="tel"
+              placeholder="+994"
+              className="login-input"
+            />
+          </div>
 
-        <button className="login-button">Log in</button>
+          <div className="password-wrapper">
+            <input
+              placeholder="Password"
+              className="login-input"
+            />
+          </div>
+
+          <a href="#" className="forgot-password">
+            Forgot password?
+          </a>
+
+          <button type="submit" className="login-button">
+            Log in
+          </button>
+        </form>
+
 
         <div className="other-choice">Other choice</div>
 
-        <button className="oauth-button apple">
+        <button className="oauth-button apple" >
           <FaApple /> Continue with Apple
         </button>
 

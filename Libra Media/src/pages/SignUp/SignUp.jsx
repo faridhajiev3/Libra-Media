@@ -1,8 +1,9 @@
 import React from "react";
-import "../../scss/signup.scss";
+// import "../../scss/signup.scss";
+import "../../scss/login.scss";
 import { NavLink } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
-import { FaApple } from "react-icons/fa"; 
+import { FaApple } from "react-icons/fa";
 
 function SignUp() {
   return (
@@ -13,32 +14,54 @@ function SignUp() {
           <span className="logo-icon">🏙</span>
           <span className="logo-text">DO</span>
         </div>
-        <input type="tel" placeholder="Full name" className="login-input" />
-        <input type="tel" placeholder="+971" className="login-input" />
-        <div className="password-wrapper">
-          <input
-            type="password"
-            placeholder="Password"
-            className="login-input"
-          />
-          <span className="show-toggle">Show</span>
-        </div>
 
-        <button className="login-button">Sign Up</button>
+        <form >
+          <div className="input-wrapper">
+            <input
+              type="text"
+              placeholder="Name"
+              className="login-input"
+            />
+          </div>
+
+
+          <div className="input-wrapper">
+            <input
+              type="tel"
+              placeholder="+994"
+              className="login-input"
+            />
+          </div>
+
+          <div className="password-wrapper">
+            <input
+              placeholder="Password"
+              className="login-input"
+            />
+          </div>
+
+          <a href="#" className="forgot-password">
+            Forgot password?
+          </a>
+
+          <button type="submit" className="login-button">
+            Log in
+          </button>
+        </form>
+
 
         <div className="other-choice">Other choice</div>
 
-        <button className="oauth-button apple">
+        <button className="oauth-button apple" >
           <FaApple /> Continue with Apple
         </button>
 
         <button className="oauth-button google">
-          <FaGoogle />
-          Continue with Google
+          <FaGoogle /> Continue with Google
         </button>
 
         <div className="signup">
-          Already registered <NavLink to="/login">Log in</NavLink>
+          No account? <NavLink to="/login">Log in</NavLink>
         </div>
       </div>
     </>

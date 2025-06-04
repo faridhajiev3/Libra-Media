@@ -1,37 +1,32 @@
 .login-container {
-    width: 300px;
-    margin: 50px auto;
-    text-align: center;
-  
-  .show-toggle {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: gray;
-    font-size: 0.9rem;
-    cursor: pointer;
-  }
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
 
- 
-  
   .logo {
     font-size: 32px;
     margin-bottom: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-  
+
     .logo-text {
       font-weight: bold;
+      color: #000;
     }
-  
+
     .logo-icon {
-      font-size: 32px;
+      font-size: 42px;
       margin: 0 5px;
     }
   }
-  
+
+  .input-wrapper {
+    position: relative;
+    margin-bottom: 15px;
+  }
+
   .login-input {
     width: 100%;
     padding: 12px;
@@ -39,35 +34,34 @@
     border-radius: 6px;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    font-size: 16px;
+
+    &:focus {
+      outline: none;
+      border-color: #007bff;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    }
   }
-  
+
   .password-wrapper {
     position: relative;
-    width: 100%;
-  
+    margin-bottom: 15px;
+  }
 
-  
-    .show-button {
-      position: absolute;
-      right: 10px;
-      top: 50%;
-      transform: translateY(-50%);
-      background: none;
-      border: none;
-      color: #007BFF;
-      cursor: pointer;
-    }
-}
-  
-  
+
   .forgot-password {
     display: block;
     text-align: left;
     font-size: 12px;
     margin: 5px 0;
-    color: #007BFF;
+    color: #007bff;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
-  
+
   .login-button {
     width: 100%;
     padding: 12px;
@@ -76,16 +70,44 @@
     border: none;
     border-radius: 6px;
     cursor: pointer;
+    font-size: 16px;
     margin-top: 10px;
+
+    &:hover {
+      background-color: #333;
+    }
+
+    &:disabled {
+      background-color: #666;
+      cursor: not-allowed;
+    }
   }
-  
+
   .other-choice {
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin: 20px 0;
     font-size: 14px;
     color: #666;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 40%;
+      height: 1px;
+      background: #ccc;
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+    }
   }
-  
+
   .oauth-button {
     width: 100%;
     padding: 12px;
@@ -93,23 +115,62 @@
     border: 1px solid #ccc;
     border-radius: 6px;
     cursor: pointer;
+    font-size: 16px;
     margin-bottom: 10px;
-  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 16px;
+
     &.apple {
       font-weight: bold;
+
+      &:hover {
+        background-color: #e0e0e0;
+      }
     }
-  
+
     &.google {
       font-weight: bold;
+
+      &:hover {
+        background-color: #e0e0e0;
+      }
     }
   }
-  
+
   .signup {
     margin-top: 20px;
     font-size: 14px;
-  
+
     a {
-      color: #007BFF;
+      color: #007bff;
       text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
-  } }
+  }
+
+  @media (max-width: 600px) {
+    max-width: 90%;
+    padding: 10px;
+
+    .logo {
+      font-size: 24px;
+
+      .logo-icon {
+        font-size: 24px;
+      }
+    }
+
+    .login-input,
+    .login-button,
+    .oauth-button {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
+}
