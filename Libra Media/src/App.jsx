@@ -25,6 +25,8 @@ import PersonalInformation from "./Profile/PersonalInformation";
 import FilterBar from "./components/FilterBar";
 import Addresses from "./Profile/Addresses";
 import LanguageSelector from "./Profile/LanguageSelector";
+import Forgot from "./registration/Forgot";
+import VerifyOtp from "./registration/VerifyOtp";
 
 const ProtectedRoute = ({ children }) => {
   const { isAuthenticated } = useSelector((state) => state.auth);
@@ -67,6 +69,8 @@ function App() {
           <Route path="/orderdetail" element={<OrderDetail />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/forgot" element={<Forgot />} />
+          <Route path="/otp" element={<VerifyOtp />} />
         </Routes>
       </PageContainer>
       {/* <Check item={cartItems} /> */}

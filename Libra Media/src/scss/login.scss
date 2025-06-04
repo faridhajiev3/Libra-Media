@@ -22,6 +22,21 @@
     }
   }
 
+  .input-box{
+    display: flex;
+    justify-content: space-between;
+
+    .inputNumber{
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid #C9CACD;
+      border-radius: 10px;
+    }
+  }
+
   .input-wrapper {
     position: relative;
     margin-bottom: 15px;

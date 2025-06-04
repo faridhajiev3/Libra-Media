@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import "../../scss/detail.scss";
 import { addToBasket } from "../../redux/slice/basketslice";
-import Comments from "../../components/comments";
+import Comments from "../../components/Comments";
 import ColorSelection from "./ColorSelection";
 import SizeSelection from "./SizeSelection";
 import ProductDetails from "./ProductDetails";

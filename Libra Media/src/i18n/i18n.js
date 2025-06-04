@@ -11,8 +11,8 @@ i18n
             az: {
                 translation: {
                     home: 'Ana Səhifə',
-                    category: 'Kateqoryalar',
-                    like: 'Sevimlİlər',
+                    category: 'Kateqoriyalar',
+                    like: 'Sevimlilər',
                     profile: 'Profil',
                     cart: 'Səbət',
                 }

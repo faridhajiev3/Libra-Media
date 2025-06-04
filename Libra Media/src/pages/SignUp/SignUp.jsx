@@ -40,9 +40,9 @@ function SignUp() {
             />
           </div>
 
-          <a href="#" className="forgot-password">
+          <NavLink to="/forgot" className="forgot-password">
             Forgot password?
-          </a>
+          </NavLink>
 
           <button type="submit" className="login-button">
             Log in
