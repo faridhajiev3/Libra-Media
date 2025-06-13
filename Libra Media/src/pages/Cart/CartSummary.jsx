@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom"; 
+import { useNavigate } from "react-router-dom";
 
 function CartSummary() {
   const navigate = useNavigate();
@@ -12,6 +12,12 @@ function CartSummary() {
   );
   const shipping = 0;
   const total = subtotal + shipping;
+
+  function handleSuccess(params) {
+    if (cartItems.length  > 0) {
+      navigate("/map")
+    }
+  }
   return (
     <div className="cart-summary">
       <h2 className="summary-title">Order Summary</h2>
@@ -27,7 +33,7 @@ function CartSummary() {
         <span>Total</span>
         <span>${total.toFixed(2)}</span>
       </div>
-      <button className="checkout-btn" onClick={() => navigate("/map")}>
+      <button className="checkout-btn" onClick={handleSuccess}>
         Proceed to Checkout
       </button>
     </div>

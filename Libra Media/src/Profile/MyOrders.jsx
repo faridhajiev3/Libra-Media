@@ -9,6 +9,7 @@ function MyOrders() {
   const goBack = () => {
     window.history.back();
   };
+  
   const navigate = useNavigate()
 
   return (

@@ -30,4 +30,5 @@ export const SidebarData = [
     nameKey: "cart",
     icon: <TiShoppingCart />,
   },
+  
 ];

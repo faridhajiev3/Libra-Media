@@ -1,16 +1,8 @@
 import React from 'react'
-import { useDispatch, useSelector } from 'react-redux';
 import { decrementQuantity, deleteBasket, incrementQuantity } from '../../redux/slice/basketslice';
 
-function CartItemsMobile() {
-    const dispatch = useDispatch();
-
-    const cartItems = useSelector((state) => state.basket.cart);
-
-    const handleDelete = (id) => {
-        console.log(id);
-        dispatch(deleteBasket(id));
-    };
+function CartItemsMobile({cartItems, handleDelete, dispatch}) {
+   
     return (
         <div className="cart-items-mobile">
             {cartItems.map((item) => (

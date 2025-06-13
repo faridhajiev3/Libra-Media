@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "../../scss/home.scss";
 import { getCategory } from "../../redux/slice/categorySlice";
-import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom"; 
 
 function Category() {
   const dispatch = useDispatch();
@@ -15,7 +15,7 @@ function Category() {
   return (
     <div>
       <div className="filter-item">
-        <NavLink to="/filter">Filter</NavLink>
+        <NavLink className="filter-btn" to="/filter">Filter</NavLink>
       </div>
 
       <div className="cards">

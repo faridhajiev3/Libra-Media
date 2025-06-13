@@ -15,7 +15,7 @@ $spacing-xxl: 64px;
   padding: $spacing-xxl 0;
 
   &-container {
-    max-width: 1400px;
+    max-width: 1400px !important;
     margin: 0 auto;
     padding: 0 $spacing-md;
   }
@@ -97,6 +97,7 @@ $spacing-xxl: 64px;
     .openHoursItem {
       display: flex;
       align-items: baseline;
+      gap: 5px;
       font-size: 18px; 
       color: #9ca3af; 
     }
